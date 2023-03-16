@@ -7,9 +7,7 @@
  *
  */
 int main(void)
-/**
- * returns 0
- */
+/* return 0  */
 {
 	char str[] = "\"Programming is like building a multilingual puzzle";
 
