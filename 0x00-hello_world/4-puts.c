@@ -1,12 +1,10 @@
 #include<stdio.h>
 
 /**
- *  
- *	This is to print the value of str using 'puts'
+ * main - prints the value of str
  *
- *	prints the value of str
- *
- *	returns '0'
+ * Prints the value of str using the 'puts' built in method
+ * return '0' 
  */
 int main(void)
 {
