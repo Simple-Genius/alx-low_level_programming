@@ -4,7 +4,6 @@
  * main - prints the value of str
  *
  * Prints the value of str using the 'puts' built in method
- *
  * Return: 0 at the end.  
  */
 int main(void)
