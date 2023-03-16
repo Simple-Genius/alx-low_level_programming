@@ -1,6 +1,8 @@
 #include<stdio.h>
 
-/*This code is to print the value of str*/
+/**
+ *   This is to print the value of str using 'puts'
+ */
 int main()
 {
 	char str[] = "\"Programming is like building a multilingual puzzle";
