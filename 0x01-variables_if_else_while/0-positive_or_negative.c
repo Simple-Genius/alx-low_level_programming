@@ -2,8 +2,8 @@
 #include <time.h>
 
 /* main - Entry point
- * 
- * This program is going to determine whether a number is zero, positive or negative
+ *
+ * This program will determine whether the number is positive , negative or 0	
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -12,17 +12,17 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if (n > 0)
+	if (a < 0)
 	{
-		printf("%d is positive")
+		printf("%d is negative");
 	}
-	else if (n < 0)
+	else if (a > 0)
 	{
-		printf("%d is negative")
+		printf("%d i positive");
 	}
 	else
 	{
-		printf("%d is 0")
+		printf("%d is 0");
 	}
 	return (0);
 }
