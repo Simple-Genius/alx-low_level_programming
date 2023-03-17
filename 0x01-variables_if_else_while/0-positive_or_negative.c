@@ -4,6 +4,7 @@
 /*
  * main - Entry point
  *
+ * Description: A program to determine whether the number is positive, negative or zero
  * Return: Always 0 (Success)
  */
 int main(void)
