@@ -1,10 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* 
+/*
  * main - Entry point
  *
- * This program will determine whether the number is positive , negative or 0	
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -15,7 +14,7 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n < 0)
 	{
-		printf("%d is negative\n",n);
+		printf("%d is negative\n", n);
 	}
 	else if (n > 0)
 	{
@@ -23,7 +22,7 @@ int main(void)
 	}
 	else
 	{
-		printf("%d is 0\n",n);
+		printf("%d is zero\n", n);
 	}
 	return (0);
 }
