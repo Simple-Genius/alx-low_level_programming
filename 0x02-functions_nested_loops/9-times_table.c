@@ -2,7 +2,7 @@
 
 /**
  * times_table -Prints the times table of 0 - 9
- * 
+ *
  * Return: Nothing.
  */
 void times_table(void)
@@ -13,7 +13,7 @@ void times_table(void)
 
 	for (a = 0; a <= 9; a++)
 	{
-		for (b= 0; b <= 9; b++)
+		for (b = 0; b <= 9; b++)
 		{
 			c = a * b;
 
