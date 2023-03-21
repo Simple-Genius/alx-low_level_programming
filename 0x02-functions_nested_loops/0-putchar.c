@@ -8,8 +8,11 @@
 
 int main(void)
 {
-	char *c = "_putchar";
-	putchar(c);
-	
+	char message[] = "_putchar";
+	int i = 0;
+	for (i = 0; i < 8; i++)
+	{
+		putchar(message[i]);
+	}
 	return (0);
 }
