@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	const char *c = "_putchar";
+	char *c = "_putchar";
 	putchar(c);
 	
 	return (0);
