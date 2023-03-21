@@ -9,8 +9,6 @@
  * Return:  0 or 1
  */
 
-int _islower(int c);
-
 int _islower(int c)
 {
 	if (islower(c))
