@@ -1,9 +1,10 @@
 #include<stdio.h>
 #include <ctype.h>
 #include "main.h"
-/* main - Entry point
+/**
+ * _isalpha - Check for alpha
  *
- *  
+ *
  * Return: Always 0 (Success)
  */
 
