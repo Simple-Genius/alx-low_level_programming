@@ -9,12 +9,6 @@
 
 int _isalpha(int c);
 
-int main(void)
-{
-       
-        return (0);
-}
-
 int _isalpha(int c)
 {
 	if(!isalpha(c))
