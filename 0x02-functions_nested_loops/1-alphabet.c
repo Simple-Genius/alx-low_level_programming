@@ -13,7 +13,12 @@ int main(void)
         return (0);
 }
 
-void print_alphabet(char c)
+void print_alphabet(void)
 {
-	putchar(c);
+	char a;
+	for (a = 'a'; a <= 'z'; a++)
+	{
+		putchar(a);
+	}
+	putchar('\n');
 }
