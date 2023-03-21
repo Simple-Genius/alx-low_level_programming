@@ -1,22 +1,17 @@
 #include<stdio.h>
 #include "main.h"
-/* main - Entry point
+/**
+ * int print_sign(int n) - function to print the sign of a number
  *
- *  
+ * @n: number to be checked
  * Return: 0, 1 or -1
  */
 
 int print_sign(int n);
 
-int main(void)
-{
-       
-        return (0);
-}
-
 int print_sign(int n)
 {
-	if(n > 0)
+	if (n > 0)
 	{
 		putchar('+,');
 		return (1);
