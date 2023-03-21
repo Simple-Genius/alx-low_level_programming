@@ -5,7 +5,8 @@
 /**
  *  _islower - checks if a letter is in lower case or not
  *
- *  
+ *  @c: The number to be checked
+ *
  * Return:  0 or 1
  */
 
