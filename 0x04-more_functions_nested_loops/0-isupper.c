@@ -15,6 +15,6 @@ int _isupper(int c)
 	else
 		flag = 0;
 
-	return flag;
+	return (flag);
 
 }
