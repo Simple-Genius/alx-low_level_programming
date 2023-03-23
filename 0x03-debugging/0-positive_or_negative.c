@@ -9,7 +9,7 @@
 * Return: Always 0 (Success)
 */
 
-int main(void)
+int positive_or_negative(void)
 {
 int n;
 
@@ -27,5 +27,5 @@ else
 {
 	printf("%d is zero\n", n);
 }
-return (0);
+ireturn (0);
 }
