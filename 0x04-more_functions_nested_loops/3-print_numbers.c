@@ -2,7 +2,7 @@
 
 /**
  * print_numbers - a function that multiplies two integers.
- * 
+ *
  * Return: Always 0
  */
 
