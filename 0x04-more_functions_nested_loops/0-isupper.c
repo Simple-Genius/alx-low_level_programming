@@ -8,16 +8,18 @@
 
 int _isupper(int c)
 {
-	int flag;
+	char capital = 'A';
+	int flag = 0;
 
-	if (isupper(c) > 0)
+	for (; capital <= 'Z'; capital++)
 	{
-		flag = 1;
-	}
-	else
-	{
-		flag = 0;
+		if (c == capital)
+		{
+			flag = 1;
+			break;
+		}
 	}
 
 	return (flag);
 }
+
