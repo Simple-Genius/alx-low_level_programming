@@ -11,10 +11,13 @@ int _isupper(int c)
 	int flag;
 
 	if (isupper(c) > 0)
+	{
 		flag = 1;
+	}
 	else
+	{
 		flag = 0;
+	}
 
 	return (flag);
-
 }
