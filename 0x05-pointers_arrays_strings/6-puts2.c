@@ -8,7 +8,7 @@
  *
  * Return: Always 0
  */
-void putis2(char *str)
+void puts2(char *str)
 {
 	int i = 0;
 
