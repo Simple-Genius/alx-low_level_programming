@@ -2,7 +2,7 @@
 #include <string.h>
 /**
  * print_rev - a function that prints a string in reverse
- * 
+ *
  *
  *@s: The string to be printed
  *
@@ -10,8 +10,10 @@
  */
 void print_rev(char *s)
 {
-	int i, length, temp;
-	length = _strlen(*s);
-	putchar(length);
-		
+	if (*s == '\0')
+       	{
+        	return;
+    	}
+	print_reverse(s + 1);
+ 	putchar(*s);
 }
