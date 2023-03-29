@@ -13,6 +13,7 @@
 char *_strcat(char *dest, char *src)
 {
 	char *join;
-	join = strcat(dest,src);
-	return join;
+
+	join = strcat(dest, src);
+	return (join);
 }
