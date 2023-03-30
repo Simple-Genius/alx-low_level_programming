@@ -7,7 +7,7 @@
  *
  * Return: Always 0
  */
-char *leet(char *)
+char *leet(char *s)
 {
 	int i = 0, j;
 	char subs[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'},
