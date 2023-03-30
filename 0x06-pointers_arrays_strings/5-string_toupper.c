@@ -11,13 +11,15 @@
  */
 char *string_toupper(char *s)
 {
-	while (*s != '\0')
+	int i = 0;
+
+	while (s[i] != '\0')
 	{
-		if (isupper(*s) == 0)
+		if (isupper(s[i]) == 0)
 		{
-			*s = toupper(*s);
+			s[i] = toupper(s[i]);
 		}
-		s++;
+		i++;
 	}
 	return (s);
 }
