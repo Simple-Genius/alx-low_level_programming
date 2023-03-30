@@ -2,16 +2,25 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * strcmp - a function that compares two strings
- * 
- *@s1: string parameter
- *@s2: string parameter
+ * reverse_array - a function that reverses an array
+ *
+ *@a: the array parameter
+ *@n: the array size
  *
  * Return: Always 0
  */
-int _strcmp(char *s1, char *s2)
+void reverse_array(int *a, int n)
 {
-	int val = strcmp(s1, s2);
-	printf(val);
-	return (val);
+	int *start = a;
+	int *end = a + n - 1;
+
+	while (start < end)
+	{
+		int temp = *start;
+		*start = *en;
+		*end = temp;
+		start++;
+		end--;
+	}
+
 }
