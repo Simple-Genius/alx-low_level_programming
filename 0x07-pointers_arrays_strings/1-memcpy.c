@@ -2,11 +2,11 @@
 #include <string.h>
 /**
  * _memcpy - function copies n bytes from memory area src to memory area dest
- * 
+ *
  *
  *@src: the source string
  *@dest: the destination string
- *@n the number of bytes
+ *@n: the number of bytes
  *
  * Return: Always 0
  */
