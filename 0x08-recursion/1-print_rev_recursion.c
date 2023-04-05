@@ -4,9 +4,9 @@
 
 /**
  * _print_rev_recursion - a function that prints a string in reverse
+ * 
  *
- *
- *@s: The string paraameter
+ *@s - The string paraameter
  *
  * Return: Always 0
  */
@@ -15,10 +15,10 @@
 
 void _print_rev_recursion(char *s)
 {
-	int i,j = strlen(s);
-
-	for (i = 0; i < j; i++)
+	if(*s == '\0')
 	{
-		putchar(s[j - i - 1]);
+		return ;
 	}
+	_print_rev_recursion(s + 1);
+	putchar(*s);
 }
