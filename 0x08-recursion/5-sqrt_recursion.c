@@ -23,12 +23,12 @@ int _sqrt(int i, int n)
 {
 	if (i > n)
 	{
-	    return (-1);
+		return (-1);
 	}
-
+	
 	else if (i * i == n)
 	{
-	    return (i);
+		return (i);
 	}
 
 	return (_sqrt(i + 1, n));
