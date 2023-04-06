@@ -1,4 +1,4 @@
-int _sqrt(int prev, int root);
+int _sqrt(int i, int n);
 
 /**
  * _sqrt_recursion - a function that returns the square root of n.
@@ -25,7 +25,7 @@ int _sqrt(int i, int n)
 	{
 		return (-1);
 	}
-	
+
 	else if (i * i == n)
 	{
 		return (i);
