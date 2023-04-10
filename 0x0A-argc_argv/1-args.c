@@ -5,7 +5,7 @@
  * main - A program that prints the number of arguements passed into it
  * @argc: the counter
  * @argv: the values
- * Return: Always 0 
+ * Return: Always 0
  */
 int main(int argc, char *argv[])
 {
@@ -13,6 +13,6 @@ int main(int argc, char *argv[])
 	{
 	    printf("%d\n", argc - 1);
 	}
-		
+
 	return (0);
 }
