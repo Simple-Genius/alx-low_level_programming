@@ -23,8 +23,8 @@ char *_strdup(char *str)
 		return (NULL);
 
 
-	ptr = strdup(str);
+	if(ptr != NULL)
+		ptr = strdup(str);
 
 	return (ptr);
-	free(ptr);
 }
