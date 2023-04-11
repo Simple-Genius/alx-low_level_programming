@@ -8,7 +8,7 @@
  * string given as a parameter
  *
  *
- *@str - pointer to the string parameter
+ *@str: pointer to the string parameter
  *
  * Return:the string
  */
@@ -18,7 +18,7 @@ char *_strdup(char *str)
 	int i;
 
 	i = strlen(str);
-	ptr = malloc(sizeof(str) * i);
+	ptr = malloc(sizeof(str) * (i + 1));
 	if (str == NULL)
 		return (NULL);
 
