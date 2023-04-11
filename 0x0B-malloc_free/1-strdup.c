@@ -19,6 +19,12 @@ char *_strdup(char *str)
 
 	i = strlen(str);
 	ptr = malloc(sizeof(str) * i);
+	if (str == NULL)
+		return (NULL);
+	if (i == 0)
+		return (NULL);
+
+
 	strcpy(ptr, str);
 	return (ptr);
 }
