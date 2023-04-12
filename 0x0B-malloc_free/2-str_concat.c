@@ -11,10 +11,10 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char *joinedString; 
-	int indexA; 
-	int indexB = 0; 
-	int length = 0; 
+	char *joinedString;
+	int indexA;
+	int indexB = 0;
+	int length = 0;
 
 	if (s1 == NULL)
 		s1 = "";
