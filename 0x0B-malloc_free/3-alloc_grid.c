@@ -9,11 +9,11 @@
  * Return: pointer to a 2D array or NULL on failure
  */
 
- int **alloc_grid(int width, int height)
+int **alloc_grid(int width, int height)
 {
 	int **grid;
-	int indexA ;
-	int indexB ;
+	int indexA;
+	int indexB;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
