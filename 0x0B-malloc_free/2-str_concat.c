@@ -11,10 +11,10 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char *joinedString; //concatString
-	int indexA; //index
-	int indexB = 0; //concatIndex
-	int length = 0; //len
+	char *joinedString; 
+	int indexA; 
+	int indexB = 0; 
+	int length = 0; 
 
 	if (s1 == NULL)
 		s1 = "";
@@ -25,7 +25,7 @@ char *str_concat(char *s1, char *s2)
 	for (indexA = 0; s1[indexA] || s2[indexA]; indexA++)
 		length++;
 
-	joinedString = malloc(sizeof(char) * len);
+	joinedString = malloc(sizeof(char) * length);
 
 	if (joinedString == NULL)
 		return (NULL);
