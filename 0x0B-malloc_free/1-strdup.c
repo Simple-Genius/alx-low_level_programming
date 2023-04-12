@@ -15,8 +15,8 @@
 
 char *_strdup(char *str)
 {
-	char *string;//new_string
-	char *string1;//start
+	char *string;
+	char *string1;
 	int i = 0,
 	int length = 0;
 
