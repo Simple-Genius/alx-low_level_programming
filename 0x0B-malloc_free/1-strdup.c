@@ -12,21 +12,38 @@
  *
  * Return:the string
  */
+
 char *_strdup(char *str)
 {
-	char *ptr;
-	int i;
+	char *string;//new_string
+	char *string1;//start
+	int i = 0,
+	int length = 0;
 
-	i = strlen(*str);
-	ptr = malloc(i * sizeof(char));
 	if (str == NULL)
 		return (NULL);
 
+	string1 = str;
 
-	if (ptr != NULL)
+	while (*str)
 	{
-		ptr = strdup(str);
-		return (ptr);
+		length++;
+		str++;
+	}
+
+	str = string1;
+	string = malloc(sizeof(char) * (len + 1));
+	string1 = string;
+
+	if (string != NULL)
+	{
+		for (i = 0; i < len; i++)
+		{
+			string[i] = *str;
+			str++;
+		}
+		string[i] = '\0';
+		return (string1);
 	}
 	else
 	{
