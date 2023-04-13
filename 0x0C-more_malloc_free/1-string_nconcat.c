@@ -4,7 +4,7 @@
 #include <stdlib.h>
 /**
  * string_nconcat - a function that concatenates two strings.
- * 
+ *
  *
  *@s1: string parameter
  *@s2: other string parameter
@@ -16,30 +16,28 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *joinedString;
-	int i = 0, j= 0, size1 = 0, size2 = 0;
-        
+	int i = 0, j = 0, size1 = 0, size2 = 0;
+
 	size1 = strlen(s1);
 	size2 = strlen(s2);
-       
-	if (n >= size2)	
+
+	if (n >= size2)
 	{
 		n = size2;
 	}
-        
+
 	joinedString = malloc(sizeof(char) * (size1 + size2 + 1));
-        
-        
+
 	while (i <= size1)
 	{
 		joinedString[i] = s1[i];
 		i++;
 	}
-        
+
 	while (j <= n)
 	{
 		joinedString[j + size1] = s2[j];
 		j++;
 	}
-        
-	return joinedString;
+	return (joinedString);
 }
