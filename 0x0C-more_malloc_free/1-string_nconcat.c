@@ -34,6 +34,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	joinedString = malloc(sizeof(char) * (size1 + size2 + 1));
 
+	if (joinedString == NULL)
+	{
+		return (NULL);
+	}
 	while (i <= size1)
 	{
 		joinedString[i] = s1[i];
