@@ -16,7 +16,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *joinedString;
-	unsigned int i = 0, j = 0, size1 = 0, size2 = 0;
+	unsigned int i = 0, size1 = 0, size2 = 0;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -39,12 +39,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 
-	for (i = 0 i < (size1 + n); i++){
-	if (i < lens1)
-		joinedString[i] = *s1, s1++;
-	else
-		joinedString[i] = *s2, s2++;
-}
+	for (i = 0; i < (size1 + n); i++)
+	{
+		if (i < size1)
+			joinedString[i] = *s1, s1++;
+		else
+			joinedString[i] = *s2, s2++;
+	}
 
 	return (joinedString);
 }
