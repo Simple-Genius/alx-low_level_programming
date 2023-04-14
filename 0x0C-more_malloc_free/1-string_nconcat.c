@@ -18,14 +18,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *joinedString;
 	unsigned int i = 0, j = 0, size1 = 0, size2 = 0;
 
-	size1 = strlen(s1);
-	size2 = strlen(s2);
-
 	if (s1 == NULL)
 		s1 = "";
 
+	while(s1[size1])
+		size1++;
+
 	if (s2 == NULL)
 		s2 = "";
+
+	while (s2[size2])
+		size2++;
 
 	if (n >= size2)
 	{
