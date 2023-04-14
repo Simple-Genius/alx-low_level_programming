@@ -44,7 +44,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		i++;
 	}
 
-	while (j <= n)
+	while (j < n)
 	{
 		joinedString[j + size1] = s2[j];
 		j++;
