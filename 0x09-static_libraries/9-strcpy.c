@@ -9,14 +9,14 @@
  *
  * Return: Always 0
  */
-int _strlen(char *s)
+char *_strcpy(char *dest, char *src)
 {
-	int l = 0;
+	char *bab = dest;
 
-	while (*s != '\0')
+	while (*src)
 	{
-		l++;
-		s++;
+		*dest++ = *src++;
 	}
-	return (l);
+
+	return (bab);
 }
