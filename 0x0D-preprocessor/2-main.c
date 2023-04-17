@@ -3,6 +3,6 @@
 #include <stdio.h>
 int main()
 {
-	printf("%s", __FILE__)
+	printf("%s", __FILE__);
 }
 #endif
