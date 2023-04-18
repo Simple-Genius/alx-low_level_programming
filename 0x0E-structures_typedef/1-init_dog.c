@@ -15,6 +15,7 @@
  * Return: Always 0
  */
 void init_dog(struct dog *d, char *name, float age, char *owner){
+	d = malloc(sizeof(dog));
 	strcpy(d->name,name);
 	strcpy(d->owner,owner);
 	d->age = age;
