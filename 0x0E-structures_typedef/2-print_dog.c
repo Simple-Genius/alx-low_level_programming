@@ -4,9 +4,9 @@
  * print_dog - Function that prints
  * the parameters of the struct
  *
- *@d - The struct parameter
+ *@d: The struct parameter
  *
- * Return: Always 0
+ * Return: Nothing
  */
 
 void print_dog(struct dog *d)
