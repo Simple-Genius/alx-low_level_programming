@@ -21,7 +21,7 @@ if (size == 0)
         return;
 for (i = 0; i < size; i++)
 {
-if (action == NULL)
+if (action == NULL|| array == NULL)
 	return;
 action(array[i]);
 }
