@@ -4,7 +4,7 @@
 #include "main.h"
 /**
  *print_name - a function that prints a name.
- * 
+ *
  *
  *@f: The name of the function
  *@name: The name it prints
