@@ -1,6 +1,5 @@
-#include <stdarg.h>
-#include <stddef.h>
 #include <stdio.h>
+#include <stdarg.h>
 
 /**
  * print_strings - a function that prints strings,
@@ -26,12 +25,24 @@ for (i = 0; i < n; i++)
 {
 c = va_arg(args, char*);
 
-
-else if (c == NULL)
+if (c == NULL)
 {
-printf("(nil)");
+	c = "(nil)";
+}
+
+if (separator == NULL)
+{
+	printf("%s", c);
+}
+else
+{
+	printf("%s", c);
+if	(i == n - 1)
+{
+	break;
+}
+printf("%s", separator);
 }
 }
-va_end(args);
 printf("\n");
 }
