@@ -1,4 +1,6 @@
 #include <stdarg.h>
+#include <stddef.h>
+#include <stdio.h>
 
 /**
  * print_numbers - a function that prints numbers
@@ -14,7 +16,8 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 va_list a;
-int j, i = 0;
+int j;
+unsigned int i = 0;
 
 va_start(a, n);
 for (i = 0; i < n; i++)
@@ -26,5 +29,6 @@ if (separator != NULL)
 else if (separator == NULL)
 	printf("%d", j);
 }
-
+va_end(a);
+printf("\n");
 }

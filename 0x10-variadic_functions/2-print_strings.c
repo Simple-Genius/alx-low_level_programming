@@ -1,4 +1,6 @@
 #include <stdarg.h>
+#include <stddef.h>
+#include <stdio.h>
 
 /**
  * print_strings - a function that prints strings,
@@ -14,7 +16,7 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 va_list args;
-int i = 0, j = 0;
+unsigned long int i = 0;
 char *c;
 
 va_start(args, n);
