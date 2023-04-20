@@ -25,13 +25,9 @@ for (i = 0; i < n; i++)
 j = va_arg(a, int);
 
 printf("%d", j);
-if (i == n - 1)
-{
-break;
-}
-if (separator != NULL)
-{
-printf("%s", separator);
-}
+
+if (i < n - 1)
+	printf("%s", separator);
+
 }
 }
