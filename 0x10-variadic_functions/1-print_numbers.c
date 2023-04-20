@@ -23,16 +23,15 @@ va_start(a, n);
 for (i = 0; i < n; i++)
 {
 j = va_arg(a, int);
-if (separator == NULL)
-{
-	printf("%d", j);
-}
-else
-{
-printf("%d", j);
-if (i < n - 1)
-	printf("%s", separator);
 
+printf("%d", j);
+if(i == n - 1)
+{
+    break;
+}
+if(separator != NULL)
+{
+printf("%s", separator);
 }
 }
 }
