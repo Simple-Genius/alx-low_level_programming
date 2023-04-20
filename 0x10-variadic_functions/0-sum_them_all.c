@@ -19,7 +19,7 @@ if (n == 0)
 return (0);
 }
 
-va_start(args,n);
+va_start(args, n);
 
 for (int i = 0; i < n; i++)
 {
@@ -28,5 +28,5 @@ sum += x;
 }
 va_end(args);
 
-return sum;
+return (sum);
 }
