@@ -24,10 +24,9 @@ for (i = 0; i < n; i++)
 {
 j = va_arg(a, int);
 if (separator != NULL)
-	printf("%d%s", j, separator);
-
-else if (separator == NULL)
 	printf("%d", j);
+if (i < n - 1 && separator != NULL)
+	printf("%s", separator);
 }
 va_end(a);
 printf("\n");

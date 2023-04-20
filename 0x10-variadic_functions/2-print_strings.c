@@ -26,14 +26,7 @@ for (i = 0; i < n; i++)
 {
 c = va_arg(args, char*);
 
-if (separator == NULL && c != NULL)
-{
-printf("%s", c);
-}
-else if (separator != NULL && c != NULL)
-{
-printf("%s%s", c, separator);
-}
+
 else if (c == NULL)
 {
 printf("(nil)");
