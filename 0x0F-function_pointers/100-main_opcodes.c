@@ -1,36 +1,53 @@
-#include <stdio.h>
+#include "variadic_functions.h"
+#include <stdarg.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * main - prints opcode of own main function
- * @argc: no. of argument
- * @argv: array of arguments
- * Return: 1 or 2 on fail, 0 on success
+ * print_all - A function prints anyting.
+ * @format: A list of type of arguments passed to the function.
+ * Return: Nothing
  */
-int main(int argc, char *argv[])
+void print_all(const char * const format, ...)
 {
-	int num, i;
-	unsigned char *ptr;
+	va_list ap;
+	char *temp;
+	int i = 0;
 
-	if (argc != 2)
+	va_start(ap, format);
+	while (format == NULL)
 	{
-		printf("Error\n");
-		exit(1);
+		printf("\n");
+		return;
 	}
-	num = atoi(argv[1]);
-	if (num < 0)
+	while (format[i])
 	{
-		printf("Error\n");
-		exit(2);
+		switch (format[i])
+		{
+			case 'c':
+				printf("%c", (char) va_arg(ap, int));
+				break;
+			case 'i':
+				printf("%d", va_arg(ap, int));
+				break;
+			case 'f':
+				printf("%f", (float) va_arg(ap, double));
+				break;
+			case 's':
+				temp = va_arg(ap, char*);
+				if (temp != NULL)
+				{
+					printf("%s", temp);
+					break;
+				}
+				printf("(nil)");
+				break;
+		}
+		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
+					format[i] == 's') && format[(i + 1)] != '\0')
+			printf(", ");
+		i++;
 	}
-	ptr = (unsigned char *)main;
-	i = 0;
-	if (num > 0)
-	{
-		while (i < (num - 1))
-			printf("%02hhx ", ptr[i++]);
-		printf("%hhx\n", ptr[i]);
-	}
-	return (0);
+	va_end(ap);
+	printf("\n");
 }
-
