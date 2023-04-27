@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
+#include "lists.h"
+
 
 /**
  * add_node - a function that adds a new node at the end of a list_t
