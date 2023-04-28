@@ -30,6 +30,6 @@ size_t print_list(const list_t *h)
 		v++;
 		h = h->next;
 	}
-
+	printf("/n");
         return (v);
 }
