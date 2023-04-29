@@ -19,8 +19,7 @@ void free_listint(listint_t *head)
 
 	p = malloc(sizeof(listint_t));
 
-	if (head != NULL)
-		p = head;
+	free(p);
 
 	free(p);
 }
