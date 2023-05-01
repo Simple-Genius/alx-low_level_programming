@@ -1,18 +1,19 @@
-#include <stdio.h>
 #include "dog.h"
-/**
- * print_dog - Function that prints
- * the parameters of the struct
- *
- *@d: The struct parameter
- *
- * Return: Nothing
- */
+#include <stdio.h>
 
+/**
+ * print_dog - a function that prints a struct dog.
+ * @d: struct to initialize
+ * Return: Nothing.
+ */
 void print_dog(struct dog *d)
 {
-	printf("%s\n", d->name);
-	printf("%f\n", d->age);
-	printf("%s\n", d->owner);
-}
+	if (d == NULL)
+		return;
+	if (d->name == NULL)
+		d->name = "(nil)";
+	if (d->owner == NULL)
+		d->owner = "(nil)";
 
+	printf("Name: %s\nAge: %0.6f\nOwner: %s\n", d->name, d->age, d->owner);
+}
