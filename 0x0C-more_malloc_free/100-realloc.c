@@ -1,44 +1,37 @@
-#include "main.h"
 #include <stdlib.h>
-
+#include "main.h"
 /**
- * string_nconcat - A function that concatenates two strings
- * @s1: An input pointer of the first string
- * @s2: An input pointer of the second string
- * @n: an input integer of number of string to concatenate
- * Return: Apointer to concatened strings or NULL if it str is NULL
+ * _realloc - A function that reallocates a memory block using malloc and free
+ * @ptr: pointer to the memory previously allocated
+ * @old_size: old size in bytes of memory llocated space
+ * @new_size: new size in bytes of memory to be allocated
+ * Return: void pointer to new memory location
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *new_str;
-	unsigned int i = 0, lens1 = 0, lens2 = 0;
+	char *new_location, *new_ptr;
+	unsigned int i = 0;
 
-	if (s1 == NULL)
-		s1 = "";
-
-	while (s1[lens1])
-		lens1++;
-
-	if (s2 == NULL)
-		s2 = "";
-
-	while (s2[lens2])
-		lens2++;
-
-	if (n >= lens2)
-		n = lens2;
-
-	new_str = malloc(lens1 + n + 1);
-	if (new_str == NULL)
-		return (NULL);
-
-	for (; i < (lens1 + n); i++)
+	if (new_size == old_size)
+		return (ptr);
+	if (ptr == NULL) /* treat as normal malloc */
 	{
-		if (i < lens1)
-			new_str[i] = *s1, s1++;
-		else
-			new_str[i] = *s2, s2++;
+		ptr = malloc(new_size);
+		if (ptr == NULL)
+			return (NULL);
+		return (ptr);
 	}
-	new_str[i] = '\0';
-	return (new_str);
+	if (new_size == 0 && ptr)
+	{
+		free(ptr);
+		return (NULL);
+	}
+	new_location = malloc(new_size);
+	new_ptr = ptr;
+	if (old_size > new_size)
+		old_size = new_size;
+	for (i = 0; i < old_size; i++)
+		new_location[i] = new_ptr[i];
+	free(ptr);
+	return (new_location);
 }
