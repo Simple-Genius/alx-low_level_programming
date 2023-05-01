@@ -47,11 +47,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		trv = trv->next;
 	}
 
-	if (idx > l)
-		return (NULL);
-
 	ptr->next = trv->next;
 	trv->next = ptr;
 
-	return (ptr);
+	return (trv->next);
 }
