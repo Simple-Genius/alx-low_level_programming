@@ -30,7 +30,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		len++;
 	}
 
-	if (index > len)
+	if (index > len || head != NULL)
 		return (NULL);
 
 	while (p < index)
