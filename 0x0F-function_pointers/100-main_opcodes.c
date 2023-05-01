@@ -1,53 +1,35 @@
-#include "variadic_functions.h"
-#include <stdarg.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * print_all - A function prints anyting.
- * @format: A list of type of arguments passed to the function.
- * Return: Nothing
+ * main - prints opcode of own main function
+ * @argc: argument count
+ * @argv: array of arguments
+ * Return: 1 or 2 on fail, 0 on success
  */
-void print_all(const char * const format, ...)
+int main(int argc, char *argv[])
 {
-	va_list ap;
-	char *temp;
-	int i = 0;
+	int bytes, i;
+	unsigned char *func_ptr;
 
-	va_start(ap, format);
-	while (format == NULL)
+	if (argc != 2)
 	{
-		printf("\n");
-		return;
+		printf("Error\n");
+		exit(1);
 	}
-	while (format[i])
+	bytes = atoi(argv[1]);
+	if (bytes < 0)
 	{
-		switch (format[i])
-		{
-			case 'c':
-				printf("%c", (char) va_arg(ap, int));
-				break;
-			case 'i':
-				printf("%d", va_arg(ap, int));
-				break;
-			case 'f':
-				printf("%f", (float) va_arg(ap, double));
-				break;
-			case 's':
-				temp = va_arg(ap, char*);
-				if (temp != NULL)
-				{
-					printf("%s", temp);
-					break;
-				}
-				printf("(nil)");
-				break;
-		}
-		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
-					format[i] == 's') && format[(i + 1)] != '\0')
-			printf(", ");
-		i++;
+		printf("Error\n");
+		exit(2);
 	}
-	va_end(ap);
-	printf("\n");
+	func_ptr = (unsigned char *)main;
+	i = 0;
+	if (bytes > 0)
+	{
+		while (i < (bytes - 1))
+			printf("%02hhx ", func_ptr[i++]);
+		printf("%hhx\n", func_ptr[i]);
+	}
+	return (0);
 }
