@@ -30,6 +30,9 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		count = count->next;
 	}
 
+	if (index == j)
+		return (count);
+
 	if (index > j || head == NULL)
 		return (NULL);
 
