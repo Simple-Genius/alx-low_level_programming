@@ -26,7 +26,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		count = count->next;
 	}
 
-	if (idx > j)
+	if (idx > j || idx < 0)
 		return (NULL);
 
 	ptr = malloc(sizeof(listint_t));
