@@ -37,6 +37,5 @@ unsigned int binary_to_uint(const char *b)
 		dec += rem * pow(2, i);
 		++i;
 	}
-	printf("\n");
 	return (dec);
 }
