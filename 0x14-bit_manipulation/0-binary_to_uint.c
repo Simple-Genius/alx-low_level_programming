@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include "main.h"
+
 /**
  * binary_to_uint - a function that converts
  * a binary number to an unsigned int
@@ -36,6 +37,6 @@ unsigned int binary_to_uint(const char *b)
 		dec += rem * pow(2, i);
 		++i;
 	}
-
+	printf("\n");
 	return (dec);
 }
